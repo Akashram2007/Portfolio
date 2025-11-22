@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero">
+    <h2>Contact Me</h2>
+
+    {% if success %}
+        <p>Thanks for your message! I will reply soon.</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+        <input type="email" name="email" placeholder="Your Email" required><br><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+        <button class="btn">Send</button>
+    </form>
+</div>
+{% endblock %}
